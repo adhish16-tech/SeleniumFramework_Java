@@ -4,7 +4,13 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class SlackNotifier {
+public class SlackTest {
+
+    private static final String WEBHOOK_URL = "https://hooks.slack.com/services/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";
+
+    public static void main(String[] args) {
+        sendMessage("⚡ Test message from Java! This checks if your webhook is working.");
+    }
 
     public static void sendMessage(String message) {
         try {
@@ -21,9 +27,12 @@ public class SlackNotifier {
             }
 
             int responseCode = conn.getResponseCode();
-            if (responseCode != 200) {
+            if (responseCode == 200) {
+                System.out.println("✅ Slack notification sent successfully!");
+            } else {
                 System.out.println("⚠️ Slack notification failed. Response code: " + responseCode);
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }

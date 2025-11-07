@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Web Automation Results</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Aug 25, 2025 02:20:35 pm</span></a>
+<a href="#"><span class="badge badge-primary">Nov 7, 2025 11:51:06 am</span></a>
 </li>
 </ul>
 </div>
@@ -80,40 +80,91 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Tests.SubmitOrderTest.submitOrder</p>
             <p class="text-sm">
-              <span>14:20:43</span> / <span>00:00:27:576</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:51:08</span> / <span>00:00:47:021</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Tests.SubmitOrderTest.submitOrder</h5>
-<span class='badge badge-success'>08.25.2025 14:20:43</span>
-<span class='badge badge-danger'>08.25.2025 14:21:11</span>
-<span class='badge badge-default'>00:00:27:576</span>
+<h5 class="test-status text-fail">Tests.SubmitOrderTest.submitOrder</h5>
+<span class='badge badge-success'>11.07.2025 11:51:08</span>
+<span class='badge badge-danger'>11.07.2025 11:51:55</span>
+<span class='badge badge-default'>00:00:47:021</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/Users/adhishgurjar/eclipse-workspace/SeleniumFrameworkDesign/reports/submitOrder.png' src="/Users/adhishgurjar/eclipse-workspace/SeleniumFrameworkDesign/reports/submitOrder.png">
+  
+    <div class="title">submitOrder</div>
+
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>14:21:11</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:51:55</td>
         <td>
-          ✅ Test Passed Successfully
+          <textarea readonly class="code-block">java.lang.RuntimeException: 🔥 Failed to click element after scroll: element click intercepted: Element is not clickable at point (1121, 653)
+  (Session info: chrome=142.0.7444.60)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.1', java.version: '22'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e31c54165c4c5950fdf9b7bb4c93bc5d, clickElement {id=f.C93859DF848E5B7AF552EC20C9566496.d.1C439602425E198AC7A112421C876CB8.e.107}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: /var/folders/w0/6rs3vw391qs...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50809}, goog:processID: 5410, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50809/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (e31c54165c4c5950fdf9b7bb4c93bc5d)] -> css selector: .action__submit]
+Session ID: e31c54165c4c5950fdf9b7bb4c93bc5d
+	at Framework.AbstractComponents.AbstractComponent.scrollIntoViewAndClick(AbstractComponent.java:116)
+	at Framework.pageobjects.CheckoutPage.submitOrder(CheckoutPage.java:51)
+	at Tests.SubmitOrderTest.submitOrder(SubmitOrderTest.java:44)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -128,7 +179,7 @@
           <div class="test-detail">
             <p class="name">Tests.SubmitOrderTest.submitOrder</p>
             <p class="text-sm">
-              <span>14:21:12</span> / <span>00:00:30:750</span>
+              <span>11:51:56</span> / <span>00:00:24:002</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -137,9 +188,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Tests.SubmitOrderTest.submitOrder</h5>
-<span class='badge badge-success'>08.25.2025 14:21:12</span>
-<span class='badge badge-danger'>08.25.2025 14:21:43</span>
-<span class='badge badge-default'>00:00:30:750</span>
+<span class='badge badge-success'>11.07.2025 11:51:56</span>
+<span class='badge badge-danger'>11.07.2025 11:52:20</span>
+<span class='badge badge-default'>00:00:24:002</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -152,7 +203,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>14:21:43</td>
+        <td>11:52:20</td>
         <td>
           ✅ Test Passed Successfully
         </td>
@@ -169,7 +220,7 @@
           <div class="test-detail">
             <p class="name">Tests.SubmitOrderTest.OrderHistoryTest</p>
             <p class="text-sm">
-              <span>14:21:44</span> / <span>00:00:04:581</span>
+              <span>11:52:20</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -178,30 +229,16 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Tests.SubmitOrderTest.OrderHistoryTest</h5>
-<span class='badge badge-success'>08.25.2025 14:21:44</span>
-<span class='badge badge-danger'>08.25.2025 14:21:48</span>
-<span class='badge badge-default'>00:00:04:581</span>
+<span class='badge badge-success'>11.07.2025 11:52:20</span>
+<span class='badge badge-danger'>11.07.2025 11:52:20</span>
+<span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>14:21:48</td>
-        <td>
-          ✅ Test Passed Successfully
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
+</div>          </div>
         </li>
         <li class="test-item"  status="fail" test-id="4"
           author=""
@@ -210,7 +247,7 @@
           <div class="test-detail">
             <p class="name">Tests.ErrorValidation.ProductErrorValidation</p>
             <p class="text-sm">
-              <span>14:21:50</span> / <span>00:00:07:061</span>
+              <span>11:52:21</span> / <span>00:00:02:972</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -219,9 +256,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Tests.ErrorValidation.ProductErrorValidation</h5>
-<span class='badge badge-success'>08.25.2025 14:21:50</span>
-<span class='badge badge-danger'>08.25.2025 14:21:57</span>
-<span class='badge badge-default'>00:00:07:061</span>
+<span class='badge badge-success'>11.07.2025 11:52:21</span>
+<span class='badge badge-danger'>11.07.2025 11:52:24</span>
+<span class='badge badge-default'>00:00:02:972</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -242,37 +279,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>14:21:56</td>
+        <td>11:52:24</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1275, 784)
-  (Session info: chrome=139.0.7258.139)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [355970e7cc29b4a8ae2d2d10a76ed3f7, clickElement {id=f.100280C45ABD02415257EE91CFAE7374.d.87A2CEF9CDDEE010657B7D2E0DE5551A.e.81}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: /var/folders/w0/6rs3vw391qs...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53333}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53333/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[ChromeDriver: chrome on mac (355970e7cc29b4a8ae2d2d10a76ed3f7)] -> css selector: .mb-3]] -> css selector: .card-body button:last-of-type]
-Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at Framework.pageobjects.ProductCatalogue.addProductTocart(ProductCatalogue.java:54)
-	at Tests.ErrorValidation.ProductErrorValidation(ErrorValidation.java:44)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at org.testng.Assert.assertFalse(Assert.java:89)
+	at Tests.ErrorValidation.ProductErrorValidation(ErrorValidation.java:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
@@ -281,7 +297,7 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at org.testng.TestRunner.privateRun(TestRunner.java:741)
 	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
@@ -294,9 +310,13 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 	at org.testng.TestNG.runSuites(TestNG.java:1112)
 	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 </textarea>
           
         </td>
@@ -313,7 +333,7 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
           <div class="test-detail">
             <p class="name">Tests.ErrorValidation.submitOrder</p>
             <p class="text-sm">
-              <span>14:21:58</span> / <span>00:00:00:000</span>
+              <span>11:52:25</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -322,8 +342,8 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Tests.ErrorValidation.submitOrder</h5>
-<span class='badge badge-success'>08.25.2025 14:21:58</span>
-<span class='badge badge-danger'>08.25.2025 14:21:58</span>
+<span class='badge badge-success'>11.07.2025 11:52:25</span>
+<span class='badge badge-danger'>11.07.2025 11:52:25</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -340,7 +360,7 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
           <div class="test-detail">
             <p class="name">Tests.ErrorValidation.submitOrder</p>
             <p class="text-sm">
-              <span>14:22:03</span> / <span>00:00:04:401</span>
+              <span>11:52:28</span> / <span>00:00:01:504</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -349,9 +369,9 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Tests.ErrorValidation.submitOrder</h5>
-<span class='badge badge-success'>08.25.2025 14:22:03</span>
-<span class='badge badge-danger'>08.25.2025 14:22:07</span>
-<span class='badge badge-default'>00:00:04:401</span>
+<span class='badge badge-success'>11.07.2025 11:52:28</span>
+<span class='badge badge-danger'>11.07.2025 11:52:30</span>
+<span class='badge badge-default'>00:00:01:504</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -372,7 +392,7 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>14:22:07</td>
+        <td>11:52:29</td>
         <td>
           <textarea readonly class="code-block">java.lang.AssertionError: expected [Incorrect email or password.] but found [Incorrect emasil or password.]
 	at org.testng.Assert.fail(Assert.java:111)
@@ -381,11 +401,9 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at Tests.ErrorValidation.submitOrder(ErrorValidation.java:35)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at Tests.ErrorValidation.submitOrder(ErrorValidation.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
@@ -394,7 +412,7 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at org.testng.TestRunner.privateRun(TestRunner.java:741)
 	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
@@ -407,9 +425,13 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 	at org.testng.TestNG.runSuites(TestNG.java:1112)
 	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 </textarea>
           
         </td>
@@ -441,12 +463,12 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.ElementClickInterceptedException</p>
+<p class="name">java.lang.RuntimeException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.ElementClickInterceptedException</h4>
+<h4>java.lang.RuntimeException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -460,9 +482,9 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>14:21:50 pm</td>
+<td>11:51:08 am</td>
 <td>
-<a href="#" class="linked" test-id='4' id='4'>Tests.ErrorValidation.ProductErrorValidation</a>
+<a href="#" class="linked" test-id='1' id='1'>Tests.SubmitOrderTest.submitOrder</a>
 </td>
 </tr>
 </tbody>
@@ -472,15 +494,15 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>1</span>
+<span class='badge log badge-danger'>2</span>
 </span>
 <p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">1 tests</p>
+<p class="duration text-sm">2 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -493,7 +515,14 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>14:22:03 pm</td>
+<td>11:52:21 am</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>Tests.ErrorValidation.ProductErrorValidation</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:52:28 am</td>
 <td>
 <a href="#" class="linked" test-id='6' id='6'>Tests.ErrorValidation.submitOrder</a>
 </td>
@@ -515,25 +544,25 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Aug 25, 2025 02:20:35 pm</h3>
+<h3>Nov 7, 2025 11:51:06 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Aug 25, 2025 02:22:08 pm</h3>
+<h3>Nov 7, 2025 11:52:30 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>4</h3>
+<h3>3</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>2</h3>
+<h3>3</h3>
 </div></div>
 </div>
 </div>
@@ -549,12 +578,12 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='66%'>
-<b>4</b> tests passed
+<div><small data-tooltip='50%'>
+<b>3</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='33%'><b>2</b> tests failed,
+<small data-tooltip='50%'><b>3</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -572,9 +601,9 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='60%'><b>3</b> events passed</small></div>
+<div><small data-tooltip='25%'><b>1</b> events passed</small></div>
 <div>
-<small data-tooltip='40%'><b>2</b> events failed,
+<small data-tooltip='75%'><b>3</b> events failed,
 <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -591,7 +620,7 @@ Session ID: 355970e7cc29b4a8ae2d2d10a76ed3f7
 </div></div>
 <script>
 var timeline = {
-"Tests.SubmitOrderTest.submitOrder":27.576,"Tests.SubmitOrderTest.submitOrder":30.75,"Tests.SubmitOrderTest.OrderHistoryTest":4.581,"Tests.ErrorValidation.ProductErrorValidation":7.061,"Tests.ErrorValidation.submitOrder":0,"Tests.ErrorValidation.submitOrder":4.401
+"Tests.SubmitOrderTest.submitOrder":47.021,"Tests.SubmitOrderTest.submitOrder":24.002,"Tests.SubmitOrderTest.OrderHistoryTest":0,"Tests.ErrorValidation.ProductErrorValidation":2.972,"Tests.ErrorValidation.submitOrder":0,"Tests.ErrorValidation.submitOrder":1.504
 };
 </script>
 <div class="row">
@@ -614,8 +643,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 4,
-failParent: 2,
+passParent: 3,
+failParent: 3,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -631,8 +660,8 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 3,
-failEvents: 2,
+passEvents: 1,
+failEvents: 3,
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 0
