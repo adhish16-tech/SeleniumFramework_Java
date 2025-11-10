@@ -5,9 +5,24 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class SlackNotifier {
-    private static final String WEBHOOK_URL = "https://hooks.slack.com/services/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"; // paste here
+    private static final String WEBHOOK_URL = getWebhookUrl();// paste here
+    private static String getWebhookUrl() {
+        String envUrl = System.getenv("SLACK_WEBHOOK_URL");
+        if (envUrl != null && !envUrl.isEmpty()) {
+            return envUrl.trim();
+        }
+        String propUrl = System.getProperty("SLACK_WEBHOOK_URL");
+        if (propUrl != null && !propUrl.isEmpty()) {
+            return propUrl.trim();
+        }
+        return ""; // default: disabled
+    }
 
     public static void sendMessage(String message) {
+        if (WEBHOOK_URL.isEmpty()) {
+            System.out.println("SlackNotifier disabled (no webhook configured).");
+            return;
+        }
         try {
             URL url = new URL(WEBHOOK_URL);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -28,5 +43,11 @@ public class SlackNotifier {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    private static String escapeJson(String s) {
+        return s.replace("\\", "\\\\")
+                .replace("\"", "\\\"")
+                .replace("\n", "\\n")
+                .replace("\r", "\\r");
     }
 }
