@@ -24,4 +24,6 @@ logs/
 
 # === TestNG / JUnit output ===
 test-output/
-surefire-reports/
+surefire-reports/chaintest
+chaintest-core-1.0.12.jar
+src/main/java/Framework/resources/chaintest.properties
