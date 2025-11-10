@@ -17,11 +17,15 @@ import java.io.File;
 import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 
+// ✅ Import ChainTest
+//import io.github.chaintest.ChainTest;
+//import io.github.chaintest.ChainTestListener;
+
 public class Listeners extends BaseTest implements ITestListener {
 
     ExtentReports extent = ExtendReporterNG.getReportObject();
     ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
-    ThreadLocal<WebDriver> driverRef = new ThreadLocal<>(); // 👈 To hold active driver
+    ThreadLocal<WebDriver> driverRef = new ThreadLocal<>();
 
     @Override
     public void onTestStart(ITestResult result) {
@@ -29,11 +33,14 @@ public class Listeners extends BaseTest implements ITestListener {
         ExtentTest test = extent.createTest(testName);
         extentTest.set(test);
 
-        // Save driver reference at test start
+        // Save driver reference
         Object testInstance = result.getInstance();
         if (testInstance instanceof BaseTest) {
             driverRef.set(((BaseTest) testInstance).driver);
         }
+
+        // ChainTest reporting
+      //  ChainTestListener.onTestStart(result);
 
         System.out.println("🚀 Test started: " + testName);
     }
@@ -41,6 +48,7 @@ public class Listeners extends BaseTest implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult result) {
         extentTest.get().log(Status.PASS, "✅ Test Passed Successfully");
+       // ChainTestListener.onTestSuccess(result);
         System.out.println("✅ Test passed: " + result.getName());
     }
 
@@ -53,6 +61,14 @@ public class Listeners extends BaseTest implements ITestListener {
             if (activeDriver != null) {
                 String screenshotPath = takeScreenshot(result.getMethod().getMethodName(), activeDriver);
                 extentTest.get().addScreenCaptureFromPath(screenshotPath, result.getMethod().getMethodName());
+
+                // ChainTest screenshot attachment
+                byte[] screenshotBytes = activeDriver instanceof TakesScreenshot ?
+                        ((TakesScreenshot) activeDriver).getScreenshotAs(OutputType.BYTES) : null;
+                if (screenshotBytes != null) {
+                //    ChainTestListener.embed(screenshotBytes, "image/png");
+                }
+
                 System.out.println("📸 Screenshot captured for failed test: " + screenshotPath);
             } else {
                 System.out.println("⚠️ No active driver found to take screenshot for: " + result.getName());
@@ -60,11 +76,14 @@ public class Listeners extends BaseTest implements ITestListener {
         } catch (IOException e) {
             System.out.println("⚠️ Failed to capture screenshot: " + e.getMessage());
         }
+
+       // ChainTestListener.onTestFailure(result);
     }
 
     @Override
     public void onFinish(ITestContext context) {
         extent.flush();
+       // ChainTestListener.onFinish(context);
         System.out.println("🏁 Test Suite finished: " + context.getName());
     }
 
@@ -76,5 +95,3 @@ public class Listeners extends BaseTest implements ITestListener {
         return path;
     }
 }
-
-
